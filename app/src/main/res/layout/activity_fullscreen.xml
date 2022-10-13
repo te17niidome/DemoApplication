@@ -46,6 +46,33 @@
                 android:text="@string/dummy_button" />
 
         </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            tools:context=".MainActivity">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="153dp"
+                android:layout_marginTop="203dp"
+                android:layout_marginEnd="145dp"
+                android:layout_marginBottom="442dp"
+                android:text="動かす"
+                android:onClick="push"
+                android:visibility="visible" />
+        </RelativeLayout>
+
     </FrameLayout>
 
 </FrameLayout>
