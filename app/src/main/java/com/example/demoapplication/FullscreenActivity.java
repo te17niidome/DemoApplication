@@ -73,6 +73,9 @@ public class FullscreenActivity extends AppCompatActivity {
             mControlsView.setVisibility(View.VISIBLE);
         }
     };
+    /*
+        test_conflict
+     */
     private boolean mVisible;
     private final Runnable mHideRunnable = new Runnable() {
         @Override
@@ -191,4 +194,6 @@ public class FullscreenActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),SubActivity.class);
         startActivity(intent);
     }
+
+    //テストテストテストテストテストテストテストテストテストテストテストテストテストテスト
 }
