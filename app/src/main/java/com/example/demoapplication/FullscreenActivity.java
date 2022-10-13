@@ -196,7 +196,7 @@ public class FullscreenActivity extends AppCompatActivity {
     }
 
     public void push_api(View view){
-        Intent intent = new Intent(getApplicationContext(),SubActivity.class);
+        Intent intent = new Intent(getApplicationContext(),WebApi.class);
         startActivity(intent);
     }
 
