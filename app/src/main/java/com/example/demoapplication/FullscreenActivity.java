@@ -191,4 +191,6 @@ public class FullscreenActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),SubActivity.class);
         startActivity(intent);
     }
+
+    //テストテストテストテストテストテストテストテストテストテストテストテストテストテスト
 }
