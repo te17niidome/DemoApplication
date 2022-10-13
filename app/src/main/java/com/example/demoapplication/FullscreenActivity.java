@@ -12,6 +12,7 @@ import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowInsets;
+import android.content.Intent;
 
 import com.example.demoapplication.databinding.ActivityFullscreenBinding;
 
@@ -184,5 +185,10 @@ public class FullscreenActivity extends AppCompatActivity {
     private void delayedHide(int delayMillis) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
+    }
+
+    public void push(View view){
+        Intent intent = new Intent(getApplicationContext(),SubActivity.class);
+        startActivity(intent);
     }
 }
