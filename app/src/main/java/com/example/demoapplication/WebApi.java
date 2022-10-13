@@ -12,15 +12,14 @@ import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowInsets;
-import android.content.Intent;
 
-import com.example.demoapplication.databinding.ActivityFullscreenBinding;
+import com.example.demoapplication.databinding.ActivityWebApiBinding;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class FullscreenActivity extends AppCompatActivity {
+public class WebApi extends AppCompatActivity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -73,9 +72,6 @@ public class FullscreenActivity extends AppCompatActivity {
             mControlsView.setVisibility(View.VISIBLE);
         }
     };
-    /*
-        test_conflict
-     */
     private boolean mVisible;
     private final Runnable mHideRunnable = new Runnable() {
         @Override
@@ -106,13 +102,13 @@ public class FullscreenActivity extends AppCompatActivity {
             return false;
         }
     };
-    private ActivityFullscreenBinding binding;
+    private ActivityWebApiBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityFullscreenBinding.inflate(getLayoutInflater());
+        binding = ActivityWebApiBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         mVisible = true;
@@ -190,15 +186,8 @@ public class FullscreenActivity extends AppCompatActivity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
-    public void push(View view){
-        Intent intent = new Intent(getApplicationContext(),SubActivity.class);
-        startActivity(intent);
+    public void submit(View view) {
+        // アクティビティを終了させる事により、一つ前のアクティビティへ戻る事が出来る。
+        finish();
     }
-
-    public void push_api(View view){
-        Intent intent = new Intent(getApplicationContext(),SubActivity.class);
-        startActivity(intent);
-    }
-
-    //テストテストテストテストテストテストテストテストテストテストテストテストテストテスト
 }

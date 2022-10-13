@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DemoApplication"
         tools:targetApi="31">
         <activity
+            android:name=".WebApi"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_web_api"
+            android:theme="@style/Theme.DemoApplication.Fullscreen" />
+        <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
@@ -24,8 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SubActivity"
-            ></activity>
+        <activity android:name=".SubActivity" />
     </application>
 
 </manifest>
